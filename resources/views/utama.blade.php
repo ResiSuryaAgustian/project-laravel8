@@ -11,6 +11,7 @@
     @yield('judul_menu')
     @yield('isi_menu')
     @yield('biodata_resi')
+    @yield('form_coba')
 
     <script type="text/javascript" src="/js/app.js"></script>
 

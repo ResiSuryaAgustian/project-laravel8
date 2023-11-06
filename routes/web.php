@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Box;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,12 @@ Route::get('/percobaan', [Box::class, 'coba']);
 Route::get('/boxi', [Box::class, 'index']);
 */
 
-Route::get('biodataku', [Box::class, 'index']);
+// Route::get('/biodataku', [Box::class, 'index']);
+// Route::post('/result', [FormController::class, 'processForm']);
+// Route::get('/form', [FormController::class, 'showForm']);
+
+Route::get("/percobaan", [Box::class, 'coba']);
+Route::get("/box", [Box::class, 'index']);
+
+Route::get("/form",[formController::class,'index']);
+Route::post("/form",[formController::class,'action'])->name('form.action');
